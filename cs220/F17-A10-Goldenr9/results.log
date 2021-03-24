@@ -1,0 +1,253 @@
+Mon Dec  4 12:45:15 EST 2017
+matthew
+test.make:6: warning: overriding recipe for target 'test'
+test.make:6: warning: ignoring old recipe for target 'test'
+test.make:9: warning: overriding recipe for target 'backtrace'
+test.make:9: warning: ignoring old recipe for target 'backtrace'
+test.make:15: warning: overriding recipe for target 'really-clean'
+test.make:15: warning: ignoring old recipe for target 'really-clean'
+test.make:6: warning: overriding recipe for target 'test'
+test.make:6: warning: ignoring old recipe for target 'test'
+test.make:9: warning: overriding recipe for target 'backtrace'
+test.make:9: warning: ignoring old recipe for target 'backtrace'
+test.make:15: warning: overriding recipe for target 'really-clean'
+test.make:15: warning: ignoring old recipe for target 'really-clean'
+cc -g -Wall -std=c99 test.c rotate.S -o test -lcunit
+In file included from /usr/include/CUnit/Basic.h:36:0,
+                 from test.c:1:
+test.c: In function ‘testANYALL’:
+macros.h:1:18: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BIT(n) (1<<(n))
+                  ^
+macros.h:6:38: note: in expansion of macro ‘IS_SET_ANY’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                      ^
+macros.h:2:24: note: in expansion of macro ‘BIT’
+ #define BIT_MASK(len) (BIT(len)-1)
+                        ^
+macros.h:3:30: note: in expansion of macro ‘BIT_MASK’
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                              ^
+macros.h:6:51: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                                   ^
+test.c:24:5: note: in expansion of macro ‘TEST_IF_ANY_SET’
+     TEST_IF_ANY_SET(0xDEADBEEFDEADBEEF,63,0),
+     ^
+test.c:28:6: error: macro "IS_SET_ANY" requires 2 arguments, but only 1 given
+     0);
+      ^
+In file included from /usr/include/CUnit/Basic.h:36:0,
+                 from test.c:1:
+macros.h:1:18: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BIT(n) (1<<(n))
+                  ^
+macros.h:6:38: note: in expansion of macro ‘IS_SET_ANY’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                      ^
+macros.h:2:24: note: in expansion of macro ‘BIT’
+ #define BIT_MASK(len) (BIT(len)-1)
+                        ^
+macros.h:3:30: note: in expansion of macro ‘BIT_MASK’
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                              ^
+macros.h:6:51: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                                   ^
+macros.h:7:39: note: in expansion of macro ‘TEST_IF_ANY_SET’
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                       ^
+test.c:27:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,63,0),
+     ^
+macros.h:7:71: error: ‘IS_SET_ANY’ undeclared (first use in this function)
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                       ^
+test.c:27:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,63,0),
+     ^
+macros.h:7:71: note: each undeclared identifier is reported only once for each function it appears in
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                       ^
+test.c:27:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,63,0),
+     ^
+macros.h:1:18: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BIT(n) (1<<(n))
+                  ^
+macros.h:2:24: note: in expansion of macro ‘BIT’
+ #define BIT_MASK(len) (BIT(len)-1)
+                        ^
+macros.h:3:30: note: in expansion of macro ‘BIT_MASK’
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                              ^
+macros.h:7:101: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                     ^
+test.c:27:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,63,0),
+     ^
+macros.h:7:100: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                    ^
+test.c:27:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,63,0),
+     ^
+macros.h:3:43: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                                           ^
+macros.h:6:38: note: in expansion of macro ‘IS_SET_ANY’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                      ^
+macros.h:6:51: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                                   ^
+test.c:30:5: note: in expansion of macro ‘TEST_IF_ANY_SET’
+     TEST_IF_ANY_SET(0xDEADBEEFDEADBEEF,35,32),
+     ^
+test.c:34:6: error: macro "IS_SET_ANY" requires 2 arguments, but only 1 given
+     1);
+      ^
+In file included from /usr/include/CUnit/Basic.h:36:0,
+                 from test.c:1:
+macros.h:3:43: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                                           ^
+macros.h:6:38: note: in expansion of macro ‘IS_SET_ANY’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                      ^
+macros.h:6:51: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                                   ^
+macros.h:7:39: note: in expansion of macro ‘TEST_IF_ANY_SET’
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                       ^
+test.c:33:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,35,32),
+     ^
+macros.h:3:43: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                                           ^
+macros.h:7:101: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                     ^
+test.c:33:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,35,32),
+     ^
+macros.h:7:100: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                    ^
+test.c:33:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xDEADBEEFDEADBEEF,35,32),
+     ^
+test.c:40:6: error: macro "IS_SET_ANY" requires 2 arguments, but only 1 given
+     1);
+      ^
+In file included from /usr/include/CUnit/Basic.h:36:0,
+                 from test.c:1:
+macros.h:7:100: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                    ^
+test.c:39:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0xFFFFFFFFFFFFFFFF,7,4),
+     ^
+macros.h:1:18: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BIT(n) (1<<(n))
+                  ^
+macros.h:6:38: note: in expansion of macro ‘IS_SET_ANY’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                      ^
+macros.h:2:24: note: in expansion of macro ‘BIT’
+ #define BIT_MASK(len) (BIT(len)-1)
+                        ^
+macros.h:3:30: note: in expansion of macro ‘BIT_MASK’
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                              ^
+macros.h:6:51: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                                   ^
+test.c:42:5: note: in expansion of macro ‘TEST_IF_ANY_SET’
+     TEST_IF_ANY_SET(0x0,63,0),
+     ^
+test.c:46:6: error: macro "IS_SET_ANY" requires 2 arguments, but only 1 given
+     0);
+      ^
+In file included from /usr/include/CUnit/Basic.h:36:0,
+                 from test.c:1:
+macros.h:1:18: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BIT(n) (1<<(n))
+                  ^
+macros.h:6:38: note: in expansion of macro ‘IS_SET_ANY’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                      ^
+macros.h:2:24: note: in expansion of macro ‘BIT’
+ #define BIT_MASK(len) (BIT(len)-1)
+                        ^
+macros.h:3:30: note: in expansion of macro ‘BIT_MASK’
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                              ^
+macros.h:6:51: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+                                                   ^
+macros.h:7:39: note: in expansion of macro ‘TEST_IF_ANY_SET’
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                       ^
+test.c:45:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0x0,63,0),
+     ^
+macros.h:1:18: warning: left shift count >= width of type [-Wshift-count-overflow]
+ #define BIT(n) (1<<(n))
+                  ^
+macros.h:2:24: note: in expansion of macro ‘BIT’
+ #define BIT_MASK(len) (BIT(len)-1)
+                        ^
+macros.h:3:30: note: in expansion of macro ‘BIT_MASK’
+ #define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+                              ^
+macros.h:7:101: note: in expansion of macro ‘BF_MASK’
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                     ^
+test.c:45:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0x0,63,0),
+     ^
+macros.h:7:100: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ #define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 
+                                                                                                    ^
+test.c:45:5: note: in expansion of macro ‘TEST_IF_ALL_SET’
+     TEST_IF_ALL_SET(0x0,63,0),
+     ^
+test.make:6: recipe for target 'test' failed
+make: *** [test] Error 1
+cc -g -Wall -std=c99 backtrace.c bt.c -o backtrace
+In file included from backtrace.c:2:0:
+bt.h:6:8: error: unknown type name ‘uint64_t’
+ extern uint64_t* bt(void);
+        ^
+bt.c:5:12: warning: ‘main’ is usually a function [-Wmain]
+ extern int main;
+            ^
+bt.c: In function ‘print_backtrace’:
+bt.c:12:4: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   v=(char *)(x+t);
+    ^
+bt.c:20:10: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘long unsigned int *’ [-Wformat=]
+   printf("#%i\t0x%16x\n",c, ret_addr);
+          ^
+test.make:9: recipe for target 'backtrace' failed
+make: *** [backtrace] Error 1
+bash: ./test: No such file or directory
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) q

@@ -1,0 +1,22 @@
+Thu Nov 16 22:06:02 EST 2017
+psinha1
+cc -g -Wall -std=c99 test.c sorter.c toggle.S -o test -lcunit
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+Node [0x556aef4b0190] = {.next=0x556aef4b01b0, .prev=(nil)}
+Node [0x556aef4b01b0] = {.next=0x556aef4b01d0, .prev=0x556aef4b0190}
+Node [0x556aef4b01d0] = {.next=0x556aef4b01f0, .prev=0x556aef4b01b0}
+Node [0x556aef4b01f0] = {.next=0x556aef4b0210, .prev=0x556aef4b01d0}
+Node [0x556aef4b0210] = {.next=0x556aef4b0230, .prev=0x556aef4b01f0}
+Node [0x556aef4b0230] = {.next=0x556aef4b0250, .prev=0x556aef4b0210}
+Node [0x556aef4b0250] = {.next=0x556aef4b0270, .prev=0x556aef4b0230}
+Node [0x556aef4b0270] = {.next=0x556aef4b0290, .prev=0x556aef4b0250}
+Node [0x556aef4b0290] = {.next=0x556aef4b02b0, .prev=0x556aef4b0270}
+Node [0x556aef4b02b0] = {.next=(nil), .prev=0x556aef4b0290}
+
+Suite: Suite_A8
+  Test: Testing Sort Nodes function  ...passed
+  Test: Testing Toggle function  ...

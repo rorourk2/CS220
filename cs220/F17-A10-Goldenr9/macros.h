@@ -1,0 +1,7 @@
+#define BIT(n) (1<<(n))
+#define BIT_MASK(len) (BIT(len)-1)
+#define BF_MASK(start, len) (BIT_MASK(len)<<(start))
+#define IS_SET_ANY(v, mask) (v&(mask))
+#define BIT_FLIP(v,mask) (v^=(mask))
+#define TEST_IF_ANY_SET(v,start,end) IS_SET_ANY(v,BF_MASK(end, start-end))
+#define TEST_IF_ALL_SET(v,start,end) (TEST_IF_ANY_SET(v,start,end)&&!(IS_SET_ANY(BIT_FLIP(int x,v)),BF_MASK(end, start-end))) 

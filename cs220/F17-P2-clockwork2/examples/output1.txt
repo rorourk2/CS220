@@ -1,0 +1,78 @@
+# Auto generated output file!
+
+student {
+	name = Alice
+	age  = 28
+	sex  = F
+	gpa  = 3.920000
+	course {
+		number = 100
+		grade  = B
+	}
+	course {
+		number = 105
+		grade  = A
+	}
+	course {
+		number = 110
+		grade  = A
+	}
+	course {
+		number = 300
+		grade  = B
+	}
+	course {
+		number = 440
+		grade  = A
+	}
+}
+
+student {
+	name = Fred
+	age  = 29
+	sex  = M
+	gpa  = 3.200000
+	course {
+		number = 580
+		grade  = A
+	}
+}
+
+student {
+	name = Joe
+	age  = 22
+	sex  = M
+	gpa  = 3.800000
+	course {
+		number = 110
+		grade  = B
+	}
+	course {
+		number = 220
+		grade  = A
+	}
+	course {
+		number = 340
+		grade  = A
+	}
+}
+
+student {
+	name = Sarah
+	age  = 22
+	sex  = F
+	gpa  = 3.000000
+	course {
+		number = 120
+		grade  = B
+	}
+	course {
+		number = 220
+		grade  = A
+	}
+	course {
+		number = 330
+		grade  = C
+	}
+}
+

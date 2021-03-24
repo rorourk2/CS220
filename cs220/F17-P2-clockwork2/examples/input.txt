@@ -1,0 +1,59 @@
+# Sample text input file. 
+# Any line that starts with '#' is a comment and must be ignored
+
+student {
+	name = Joe
+	age  = 22
+	sex  = M
+	gpa  = 3.8
+	course {
+		number = 220
+# Note grade is either A, B, C, D, E or F. No intermediates A+, B-, etc.
+		grade  = A
+	}
+	course {
+		number = 110
+		grade = B
+	}
+	course {
+		number = 340
+		grade = A
+	}
+}
+
+student {
+	name = Sarah
+	age  = 22
+	sex  = F
+	gpa  = 3.0
+	course {
+		number = 220
+		grade = A
+	}
+	course {
+		number = 120
+		grade = B
+	}
+	course {
+		number = 330
+		grade = C
+	}
+}
+
+student {
+	name = Fred
+	age  = 29
+	sex  = M
+	gpa  = 3.2
+	course {
+		number = 580
+		grade = A
+	}
+}
+
+student {
+	name = Steve
+	age  = 21
+	sex  = M
+	gpa  = 4.0
+}

@@ -1,0 +1,6 @@
+Phase 0:  Putty username (mquinn5 or rorourk2)
+Phase 1:  19 29 4 17 0 42
+Phase 2:  294
+Phase 3:  any number n greater than 5, and the (n+1)th element of the fibonacci sequence, such as "6 5"
+Phase 4:  187
+Phase 5: (0<=all 8 numbers<=7)
